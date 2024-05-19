@@ -148,11 +148,56 @@ public class Exercise003 {
 
         String doorLock = (doorCode2 == 1356) ? "Senha correta, pode abrir" : "Senha incorreta, tente novamente.";
         System.out.println(doorLock);
-
         System.out.println("-----------------------------------");
 
         // 15. SWITCH
         System.out.println("15. SWITCH");
+        /* Seleciona um dos muitos blocos de código a serem executados testar
+        * valores dos cases */
+
+        /* O switch possui um valor de entrada e "cases"(opções) que serão
+        selecionadas a partir do valor de entrada e o valor correspondente*/
+        int switchVal1 = 1;
+        /* Sem Break: continua a leitura do código enquanto
+        o valor correspondente for maior.*/
+        switch(switchVal1) {
+            case 1:
+                System.out.println("Switch 1 selecionado");
+            case 2:
+                System.out.println("Switch 2 selecionado");
+            case 3:
+                System.out.println("Switch 3 selecionado");
+        }
+
+        int switchVal2 = 2;
+        // Com Break: pausa a leitura do conteúdo;
+        switch(switchVal2) {
+            case 1:
+                System.out.println("Switch 1 selecionado");
+                break;
+            case 2:
+                System.out.println("Switch 2 selecionado");
+                break;
+            case 3:
+                System.out.println("Switch 3 selecionado");
+                break;
+        }
+
+        int switchVal3 = 2;
+        // Default: valor padrão quando não há valor correspondente;
+        switch(switchVal3) {
+            case 1:
+                System.out.println("Switch 1 selecionad");
+                break;
+            case 2:
+                System.out.println("Switch 2 selecionad0");
+                break;
+            case 3:
+                System.out.println("Switch 3 selecionado");
+            default:
+                System.out.println("O valor não possui resultado.");
+                break;
+        }
 
 
 
