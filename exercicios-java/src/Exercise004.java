@@ -172,6 +172,7 @@ public class Exercise004 {
         }
         System.out.println("---------------");
         System.out.println("Tabuada de 0 a 5 para valores de 0 a 10.");
+
         // Exercise 2: Tabuada da multiplicação de 0 a 5 para os valores de 1 a 3.
         for (int multiplicador1 = 0; multiplicador1 <= 3; multiplicador1++) {
             System.out.println("Tabuada: "+ multiplicador1);
@@ -183,5 +184,53 @@ public class Exercise004 {
 
         // 18. BREAK/CONTINUE
         System.out.println("18. BREAK/CONTINUE");
+        System.out.println("Break: pode ser usada para saltar em switch e sair de Loops.");
+
+        /*  Break de Loop
+         *
+         *  ...for (variável, condição, condição contínua)...
+         *      if (variavel == valor) {
+         *          break;
+         *      }
+         *  }
+         */
+        for (int valBreak1 = 0; valBreak1 < 10; valBreak1++) {
+            if (valBreak1 == 5) {
+                break;
+            }
+            System.out.print(" "+ valBreak1);
+        }
+        System.out.println(" ");
+
+        /*  Continue
+         *  ...for (variável, condição, condição contínua)...
+         *      if (variavel == valor x) {
+         *          break;
+         *      } else (variavel == valor x + 5) {
+         *          continue;
+         *      }
+         *  }
+         */
+        for (int valCont1 = 1; valCont1 <= 10; valCont1++) {
+            if (valCont1 <= 4) {
+                continue;
+            }
+            System.out.print(" "+ valCont1);
+        }
+        System.out.println(" ");
+
+        System.out.println("Break + Continue com WHILE");
+
+        int valCont2 = 0;
+        while (valCont2 < 10) {
+            System.out.print(" "+ valCont2);
+            valCont2++;
+            if (valCont2 == 4) {
+                break;
+            }
+        }
+
+        System.out.println(" ");
+        
     }
 }

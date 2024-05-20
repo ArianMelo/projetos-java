@@ -199,11 +199,5 @@ public class Exercise003 {
                 break;
         }
 
-
-
-
-
-
-
     }
 }
