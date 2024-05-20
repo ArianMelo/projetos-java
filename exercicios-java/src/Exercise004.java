@@ -119,12 +119,69 @@ public class Exercise004 {
         }
         System.out.println(" ");
         for (int valInt2 = 0; valInt2 <= 5; valInt2++){
-            System.out.print(valInt2 + "-Nop ");
+            System.out.println(valInt2 + "-Nop ");
         }
+        System.out.println("-------------------------");
 
         // 17.1 FOR LOOP: NESTED LOOPS
         System.out.println("17.1 FOR LOOP: NESTED LOOPS");
         System.out.println("Nested Loops: são loops aninhados (loop dentro de loop.");
-        System.out.println("Nested Loops: ");
+        System.out.println("Nested Loops: O \"loop interno\" será executado \numa vez para cada \"lopp externo\".\n");
+
+        // Para cara for externo que repete, os blocos de for interno serão repetido também.
+        for (int externo1 = 1; externo1 <= 2; externo1++) {
+            System.out.println("Outer/Externo" + externo1 + "");
+            for (int interno1 = 1; interno1 <= 3; interno1++) {
+                System.out.println(" Inner/Interno" + interno1);
+            }
+        }
+        System.out.println("-------------------------");
+
+        // 17.2 FOR EACH LOOP
+        System.out.println("17.2 FOR EACH LOOP");
+        System.out.println("For Each: usado para percorrer elementos de um array.");
+
+        /* Estrutura do código For-Each:
+         *
+         * - INSTRUÇÃO: Usado para percorrer Arrays.
+         *
+         *  for (tipo variavelNome : arrayNome) {
+         *      Bloco de código a ser executado
+         *  }
+         */
+
+        /* Estrutura do Array
+         *
+         *  tipo[] arrayNome = {valor1, valor2, valor3,...};
+         *  for (tipo variavelNome : arrayNome) {
+         *      bloco de código a ser executado;
+         *  }
+         */
+
+        String[] forEcars1 = {"BMW", "FORD", "HONDA"};
+        for (String forEcarsPer1 : forEcars1) {
+            System.out.print(forEcarsPer1 + "|");
+        }
+        System.out.println("-------------------------");
+
+        // 17.2 FOR EACH: EXERCISE
+        System.out.println("17.2 FOR EACH: EXERCISE");
+        // Exercise 1: Percorrer de 0 a 100 de 10 em 10;
+        for (int forTest1 = 0; forTest1 <= 100; forTest1 = forTest1 + 10) {
+            System.out.print(forTest1 + " ");
+        }
+        System.out.println("---------------");
+        System.out.println("Tabuada de 0 a 5 para valores de 0 a 10.");
+        // Exercise 2: Tabuada da multiplicação de 0 a 5 para os valores de 1 a 3.
+        for (int multiplicador1 = 0; multiplicador1 <= 3; multiplicador1++) {
+            System.out.println("Tabuada: "+ multiplicador1);
+            for (int valMult1 = 0; valMult1 <= 5; valMult1++) {
+                System.out.println(" "+ valMult1 + "x"+ multiplicador1 + " = " +(valMult1 * multiplicador1));
+            }
+        }
+        System.out.println("---------------");
+
+        // 18. BREAK/CONTINUE
+        System.out.println("18. BREAK/CONTINUE");
     }
 }
