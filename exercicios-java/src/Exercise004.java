@@ -218,7 +218,6 @@ public class Exercise004 {
             System.out.print(" "+ valCont1);
         }
         System.out.println(" ");
-
         System.out.println("Break + Continue com WHILE");
 
         int valCont2 = 0;
@@ -229,8 +228,98 @@ public class Exercise004 {
                 break;
             }
         }
-
         System.out.println(" ");
-        
+        int valCont3 = 0;
+        while (valCont3 < 10) {
+            if (valCont3 == 5) {
+                valCont3++;
+                continue;
+            }
+            System.out.print(" "+ valCont3);
+            valCont3++;
+        }
+        System.out.println(" ");
+        System.out.println("---------------");
+
+        // 19.1 ARRAYS
+        System.out.println("19.1 ARRAYS");
+
+        /*
+        *   Array:
+        *   String[] nomeDaVariável = {valor1, valor2, valor3,...}
+        *   [0] = valor1
+        *   [1] = valor2
+        *   [2] = valor3
+        */
+        System.out.println("Estrutura de um array: String[] nomeDaVariável = {valor1, valor2, valor3,...};");
+        int[] arrayNum1 = {10, 20, 30, 40};
+        System.out.println("Soma dos valores: 30 + 10: "+ (arrayNum1[2] + arrayNum1[0]));
+        String[] arrayCars1 = {"BMW","Volvo","Mazda"};
+        System.out.println("Carro: " + arrayCars1[0]);
+        System.out.println("Carro: " + arrayCars1[1]);
+        System.out.println("Carro: " + arrayCars1[2]);
+        // Propriedade Length
+        System.out.println("Tamanho do Array: "+ arrayCars1.length);
+        System.out.println("---------------");
+
+        // 19.2 ARRAYS COM FOR-EACH
+        System.out.println("19.2 ARRAYS COM FOR-EACH");
+        /*
+        *   Array com For-Each:
+        *   for (tipo variável : nomeDoArray {
+        *       Código a ser executado.
+        *   }
+        */
+        String[] arrayCity1 = {"São Paulo","Campinas","Rio de Janeiro"};
+        for (String contCity1 : arrayCity1) {
+            System.out.println(contCity1);
+        }
+        // Array Bidimensional
+        System.out.println("Array Bidimensional");
+        String[][] arrya2Dimen1 = {{"Alunos:", "Professores:"},{"Lucas","João","Roberto"}};
+        System.out.println(arrya2Dimen1[0][1]);
+        System.out.println(arrya2Dimen1[1].length);
+        System.out.println(arrya2Dimen1[0][0]);
+        System.out.println(arrya2Dimen1[1].length);
+
+        //  19.3 ARRAYS: EXERCISE
+        System.out.println("19.3 ARRAYS: EXERCISE");
+        // Crie uma calculadora utilizando arrays e for.
+
+        // Um arrya contendo diferentes idades;
+        int[] calcNum1 = {0,1,2,3,4,5,6,7,8,9};
+        float calcMedia1, calcSoma1 = 0;
+        // O tamanho do arrya;
+        int length = calcNum1.length;
+        // Loop dos elementos do array;
+        for (int calcNumbers1 : calcNum1) {
+            calcSoma1 += calcNumbers1;
+        }
+        // Calcule a média dividindo a soma pelo comprimento;
+        calcMedia1 = calcSoma1 / length;
+        // Print o resultado;
+        System.out.println("A idade média é:"+ calcMedia1);
+
+        //Array com diferentes valores de idade.
+        int valIdade[] = {20, 22, 18, 35, 48};
+        float media, soma = 0;
+        // Requisitar o tamanho do Array
+        int valTamanho = valIdade.length;
+        // Loop dos elementos do array
+        for (int age: valIdade) {
+            soma += age;
+        }
+        // Calcula a media dividindo a soma pelo comprimento;
+        media = soma / valTamanho;
+        // Exibir o resultado médio das idades
+        System.out.println("A idade média é: "+ media);
+
+        // Requisitar o menor valor do Array
+
+        // 1. Crie os valores flaot do média e soma.
+        // 2. Requisite os tamanho do array.
+        // 3. Crei a variável 'menor idade' e requisite o primeiro valor do Array
+
     }
+
 }
