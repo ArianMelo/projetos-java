@@ -4,7 +4,10 @@
     // 18. BREAK/CONTINUE
     // 19. ARRAYS
 
-public class Exercise004 {
+    import java.util.Arrays;
+    import java.util.Scanner;
+
+    public class Exercise004 {
     public static void main(String[] args) {
 
         // 16. WHILE LOOP
@@ -130,7 +133,7 @@ public class Exercise004 {
 
         // Para cara for externo que repete, os blocos de for interno serão repetido também.
         for (int externo1 = 1; externo1 <= 2; externo1++) {
-            System.out.println("Outer/Externo" + externo1 + "");
+            System.out.println("Outer/Externo" + externo1 + " ");
             for (int interno1 = 1; interno1 <= 3; interno1++) {
                 System.out.println(" Inner/Interno" + interno1);
             }
@@ -145,7 +148,7 @@ public class Exercise004 {
          *
          * - INSTRUÇÃO: Usado para percorrer Arrays.
          *
-         *  for (tipo variavelNome : arrayNome) {
+         *  for (tipo nomaDaVariavel : nomaDoArray) {
          *      Bloco de código a ser executado
          *  }
          */
@@ -162,6 +165,7 @@ public class Exercise004 {
         for (String forEcarsPer1 : forEcars1) {
             System.out.print(forEcarsPer1 + "|");
         }
+        System.out.println(" ");
         System.out.println("-------------------------");
 
         // 17.2 FOR EACH: EXERCISE
@@ -170,6 +174,7 @@ public class Exercise004 {
         for (int forTest1 = 0; forTest1 <= 100; forTest1 = forTest1 + 10) {
             System.out.print(forTest1 + " ");
         }
+        System.out.println(" ");
         System.out.println("---------------");
         System.out.println("Tabuada de 0 a 5 para valores de 0 a 10.");
 
@@ -218,8 +223,8 @@ public class Exercise004 {
             System.out.print(" "+ valCont1);
         }
         System.out.println(" ");
-        System.out.println("Break + Continue com WHILE");
 
+        System.out.println("Break + Continue com WHILE");
         int valCont2 = 0;
         while (valCont2 < 10) {
             System.out.print(" "+ valCont2);
@@ -229,6 +234,8 @@ public class Exercise004 {
             }
         }
         System.out.println(" ");
+        System.out.println("O break ativa quando recebe o valor 4: "+ valCont2);
+
         int valCont3 = 0;
         while (valCont3 < 10) {
             if (valCont3 == 5) {
@@ -239,11 +246,11 @@ public class Exercise004 {
             valCont3++;
         }
         System.out.println(" ");
+        System.out.println("O valor inserido no if é excluído, no caso o valor 5.");
         System.out.println("---------------");
 
         // 19.1 ARRAYS
         System.out.println("19.1 ARRAYS");
-
         /*
         *   Array:
         *   String[] nomeDaVariável = {valor1, valor2, valor3,...}
@@ -273,7 +280,10 @@ public class Exercise004 {
         String[] arrayCity1 = {"São Paulo","Campinas","Rio de Janeiro"};
         for (String contCity1 : arrayCity1) {
             System.out.println(contCity1);
+            System.out.println("Tamanho dos elementos em array:"+ contCity1.length());
         }
+        System.out.println("Quantidade de elementos do array: "+ Arrays.stream(arrayCity1).count());
+
         // Array Bidimensional
         System.out.println("Array Bidimensional");
         String[][] arrya2Dimen1 = {{"Alunos:", "Professores:"},{"Lucas","João","Roberto"}};
@@ -291,10 +301,12 @@ public class Exercise004 {
         float calcMedia1, calcSoma1 = 0;
         // O tamanho do arrya;
         int length = calcNum1.length;
+        System.out.println("tamanho do calcNum1: "+ calcNum1.length);
         // Loop dos elementos do array;
         for (int calcNumbers1 : calcNum1) {
             calcSoma1 += calcNumbers1;
         }
+        System.out.println("tamanho do calcSoma1 : "+ calcSoma1);
         // Calcule a média dividindo a soma pelo comprimento;
         calcMedia1 = calcSoma1 / length;
         // Print o resultado;
@@ -306,20 +318,38 @@ public class Exercise004 {
         // Requisitar o tamanho do Array
         int valTamanho = valIdade.length;
         // Loop dos elementos do array
-        for (int age: valIdade) {
-            soma += age;
+        for (int idades: valIdade) {
+            soma += idades;
         }
+        System.out.println("tamanho do soma : "+ soma);
         // Calcula a media dividindo a soma pelo comprimento;
         media = soma / valTamanho;
         // Exibir o resultado médio das idades
         System.out.println("A idade média é: "+ media);
+        System.out.println("---------------");
 
-        // Requisitar o menor valor do Array
+        //  19.4 ARRAYS: MULTIDIMENSIONAIS
+        System.out.println("19.4 ARRAYS: MULTIDIMENSIONAIS");
+        // São usados para armazenar dados em formato de tabela, com linhas e colunas.
+        int [][] numMultiArray1 = {{1,2,3,4,5}, {6,7,8}};
+        // Todos os valores de ambos os conjuntos de arrays;
+        System.out.println(numMultiArray1[0][0]);
+        System.out.println(numMultiArray1[0][1]);
+        System.out.println(numMultiArray1[0][2]);
+        System.out.println(numMultiArray1[0][3]);
+        System.out.println(numMultiArray1[0][4]);
+        System.out.println(numMultiArray1[1][0]);
+        System.out.println(numMultiArray1[1][1]);
+        System.out.println(numMultiArray1[1][2]);
+        int somaDeValArray = numMultiArray1[0][0] + numMultiArray1[1][0];
+        System.out.println("A soma de valores do array: "+ somaDeValArray);
 
-        // 1. Crie os valores flaot do média e soma.
-        // 2. Requisite os tamanho do array.
-        // 3. Crei a variável 'menor idade' e requisite o primeiro valor do Array
-
+        int[][] meuNum1 = {{1,2,3,4}, {5,6,7}, {8,9}};
+        for (int i = 0; i < meuNum1.length; ++i) {
+            for (int j = 0; j < meuNum1[i].length; ++j) {
+                System.out.print(meuNum1[i][j]);
+            }
+        }
     }
 
 }
