@@ -4,13 +4,20 @@ import com.sun.tools.javac.Main;
 
 public class ClassExercise006 {
 
+    int n;
+
+    public ClassExercise006() {
+        n = 5;
+    }
+
     int x = 5;
     int y = 8;
     final int z = 10;
-
     String olaMundo006 = "Hello World! ClassExercise006";
 
     public static void main(String[] args) {
+        ClassExercise006 nVal = new ClassExercise006();
+        System.out.println(nVal.n);
         // Crie vários objetos
         // myObj e um objeto da classe ClassExercise006
         // Pode criar um objeto de uma classe e acessá-lo em outra classe.

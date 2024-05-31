@@ -8,6 +8,7 @@ package ClassPackage;
 
 
 public class Exercise006 {
+
     public static void main(String[] args) {
         // 25. JAVA POO
         System.out.println("25. JAVA POO");
@@ -64,9 +65,28 @@ public class Exercise006 {
         // O "construtor" é chamado quando um objeto de uma classe é criado.
         // Pode ser usado para definir valores iniciais de atributos e objetos.
 
+        // o nome do construtor deve corresponder ao nome da classe
+        // e não pode ter um tipo de retorno (como void).
+        Exercise006 x1Obj = new Exercise006(5);
+        System.out.println(x1Obj.x1); // Print o valor de x1.
 
-        System.out.println("---------------------------------");
+        Exercise006 yObj = new Exercise006(18, "Roberto");
+        System.out.println(yObj.x2 + " " + yObj.modelName); // Print o valor de x1.
+    }
+    // Declarando atributos
+    int x1;
+    int x2;
+    String modelName;
 
+    public Exercise006(int y) {
+        // Atribuindo valor ao atributo
+        x1 = y;
+    }
+
+    public Exercise006(int xVal, String name) {
+        // atribuindo valores aos atributos
+        x2 = xVal;
+        modelName = name;
     }
 
 }
