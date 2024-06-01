@@ -1,10 +1,9 @@
+package ClassPackage007;
 
     // 30. MODIFICADORES DE ACESSO
     // 31. ENCAPSULAMENTO
-    // 32. PACOTES JAVA/API
-    // 33. HERANÇA
-    // 34. POLIMORFISMO
 
+import ClassPackage.*;
 
 public class Exercise007 {
 
@@ -12,7 +11,7 @@ public class Exercise007 {
         // 30. MODIFICADORES DE ACESSO
         System.out.println("30. MODIFICADORES DE ACESSO");
         /*
-         *   A publicpalavra-chave é um modificador de acesso
+         *   A public palavra-chave é um modificador de acesso
          *   , o que significa que é usada para definir o nível de acesso para
          *  classes, atributos, métodos e construtores.
         */
@@ -41,33 +40,32 @@ public class Exercise007 {
         System.out.println("TRANSIENT: Atributos e métodos são ignorados ao serializar o objeto que os contém.");
         System.out.println("SYNCHRONIZED: Os métodos só podem ser acessados por um thread por vez");
         System.out.println("VOLATILE: O valor de um atributo não é armazenado em cache localmente e é sempre lido na \"memória principal\"");
+        System.out.println("-------------------");
 
-        Exercise007 myObj = new Exercise007();
+        ClassExercise007 myObj = new ClassExercise007();
         // AMBOS OS VALORES RETORNARÃO UM ERRO.
         //myObj.x = 25;
         //myObj.PI = 43;
-        System.out.println(myObj.pi);
-        staticMethod();
         myObj.publicMethod();
 
         // 31. ENCAPSULAMENTO
         System.out.println("31. ENCAPSULAMENTO");
-    }
+        // Encapsulamento: serve para garantir que os dados "confidenciais" sejam ocultados dos usuários.
+        // Para isso e necessário declarar variáveis/atributos de classe como private.
+        // Fornecer métodos públicos get e set para acessar e atualizar o valor de uma private variavel.
+        // Variáveis private só podem ser acessadas dentro da mesma classe(uma classe externa não tem acesso a elas)
+        // É possíevel acessá-las se fornecermos métodos públicos get e set.
+        // get retorna o valor da variável e ser define o valor.
+        // Sintaxe: get ou set seguido do nome da variável com a primeira letra maiúscula.
+        myObj.setName("Luis");
+        System.out.println("Meu nome é: " + myObj.getName());
+        // Melhor controle de atributos e métodos de classe.
+        // Os atributos de classe podem ser somente leitura (se você usar apenas o getmétodo).
+        // Somente gravação (se você usar apenas o setmétodo).
+        // Flexível: o programador pode alterar uma parte do código sem afetar outras partes.
+        // Maior segurança dos dados.
 
-    final int x = 10;
-    final double pi = 3.14;
-    // Método Estático
-    static void staticMethod() {
-        System.out.println("Método Estático");
-    }
-    // Método Público
-    public void publicMethod() {
-        System.out.println("Método Público");
-    }
-    // Método Abstrato
-    abstract class Main1 {
-        public String fname = "Abstract";
-        public int age = 22;
-        public abstract void study();
+        ClassExercise006 importExec006 = new ClassExercise006();
+        importExec006.myMethod2();
     }
 }

@@ -1,4 +1,4 @@
-
+package Exercises;
 // 1. HOME
 // 2. INTRO
 // 3. GET STARTED (Java install)

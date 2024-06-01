@@ -1,13 +1,12 @@
-
-    // 16. WHILE LOOP
+package Exercises;
+// 16. WHILE LOOP
     // 17. FOR LOOP
     // 18. BREAK/CONTINUE
     // 19. ARRAYS
 
     import java.util.Arrays;
-    import java.util.Scanner;
 
-    public class Exercise004 {
+public class Exercise004 {
     public static void main(String[] args) {
 
         // 16. WHILE LOOP

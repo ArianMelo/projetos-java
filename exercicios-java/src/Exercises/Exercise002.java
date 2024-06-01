@@ -1,4 +1,4 @@
-
+package Exercises;
 // 6. COMMENTS
 // 7. VARIABLES
 // 8. DATA TYPES

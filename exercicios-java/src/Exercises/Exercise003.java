@@ -1,5 +1,5 @@
-
-    // 11. STRINGS
+package Exercises;
+// 11. STRINGS
     // 12. MATH
     // 13. BOOLEANS
     // 14. IF...ELSE
