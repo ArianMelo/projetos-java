@@ -1,6 +1,6 @@
 package Project;
 
-public class Car {
+public class Vehicle {
 
     public void dirigir(){
         acelerar();
@@ -29,5 +29,18 @@ public class Car {
     public void ligar() {
         System.out.println("Liguei");
     }
-
 }
+
+class Car extends Vehicle {
+    public void portaMalas() {
+        System.out.println("Abrindo porta-malas");
+    }
+}
+
+class Moto extends Vehicle {
+    public void darGrau() {
+        System.out.println("Dando grau.");
+    }
+}
+
+
